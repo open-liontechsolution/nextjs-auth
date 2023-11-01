@@ -15,12 +15,13 @@ const AuthForm = ({ title }) => {
     <form className={styles.form}>
       <h1>{title}</h1>
       <section className={styles.socialContainer}>
-        {SOCIAL_METHODS.map(({ method, loginTitle, logo }, idx) => (
+        {SOCIAL_METHODS.map(({ method, loginTitle, logo, provider }, idx) => (
           <SocialButton
             key={idx}
             method={method}
             loginTitle={loginTitle}
             logo={logo}
+            provider={provider}
           />
         ))}
       </section>

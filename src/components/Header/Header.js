@@ -1,8 +1,13 @@
+"use client";
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import { ROUTES } from "../../../constants";
+import { getServerSession } from "next-auth";
+import { signOut, useSession } from "next-auth/react";
 
 const Header = () => {
+  const session = useSession();
+
   return (
     <header className={styles.header}>
       <Link href={ROUTES.LOGIN}>
@@ -11,6 +16,11 @@ const Header = () => {
       <Link href={ROUTES.REGISTER}>
         <div className={styles.menuItem}>Register</div>
       </Link>
+      {session?.data && (
+        <div className={styles.menuItemLogout} onClick={signOut}>
+          Logout
+        </div>
+      )}
     </header>
   );
 };
