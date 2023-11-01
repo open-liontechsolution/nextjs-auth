@@ -1,0 +1,17 @@
+.header {
+  background-color: rgb(185, 205, 255);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  font-size: 2rem;
+  gap: 1rem;
+}
+
+.menuItem {
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: 1px solid rgb(48, 50, 51);
+  cursor: pointer;
+  color: black;
+}

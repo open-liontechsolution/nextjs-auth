@@ -1,0 +1,31 @@
+import SocialButton from "src/components/SocialButton/SocialButton";
+import googleLogo from "src/assets/images/google-logo.svg";
+import styles from "./AuthForm.module.scss";
+
+export const SOCIAL_METHODS = [
+  {
+    method: "Login",
+    provider: "Google",
+    loginTitle: "Login with Google",
+    logo: googleLogo,
+  },
+];
+const AuthForm = ({ title }) => {
+  return (
+    <form className={styles.form}>
+      <h1>{title}</h1>
+      <section className={styles.socialContainer}>
+        {SOCIAL_METHODS.map(({ method, loginTitle, logo }, idx) => (
+          <SocialButton
+            key={idx}
+            method={method}
+            loginTitle={loginTitle}
+            logo={logo}
+          />
+        ))}
+      </section>
+    </form>
+  );
+};
+
+export default AuthForm;
