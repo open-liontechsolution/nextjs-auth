@@ -2,7 +2,6 @@
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import { ROUTES } from "../../../constants";
-import { getServerSession } from "next-auth";
 import { signOut, useSession } from "next-auth/react";
 
 const Header = () => {
