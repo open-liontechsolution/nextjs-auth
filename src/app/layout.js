@@ -5,6 +5,9 @@ import { getServerSession } from 'next-auth';
 import Header from '../components/Header/Header';
 import { authOptions } from '../../pages/api/auth/[...nextauth]';
 
+// Force Dynamic prevent build error
+export const dynamic = 'force-dynamic';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
