@@ -1,5 +1,7 @@
 {
-  "compilerOptions": {
-    "baseUrl": "."
-  }
+	"compilerOptions": {
+		"module": "esnext",
+		"moduleResolution": "node",
+		"baseUrl": "."
+	}
 }

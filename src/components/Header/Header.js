@@ -1,33 +1,34 @@
-import Link from "next/link";
-import styles from "./Header.module.scss";
-import { ROUTES } from "../../../constants";
-import { getServerSession } from "next-auth";
-import MenuItem from "../MenuItem/MenuItem";
+import styles from './Header.module.scss';
+import { ROUTES } from '../../../constants';
+import { getServerSession } from 'next-auth';
+import MenuItem from '../MenuItem/MenuItem';
 
 const Header = async () => {
-  const session = await getServerSession();
-  console.log(session, "session");
+	let session;
+	try {
+		session = await getServerSession();
+	} catch (error) {
+		console.error(error);
+	}
 
-  const MENU_ITEMS = [
-    { title: "Login", route: ROUTES.LOGIN },
-    { title: "Register", route: ROUTES.REGISTER },
-    { title: "Logout", isAuth: session?.user },
-  ];
+	const MENU_ITEMS = [
+		{ title: 'Login', route: ROUTES.LOGIN },
+		{ title: 'Register', route: ROUTES.REGISTER },
+		{ title: 'Logout', isAuth: !!session },
+	];
 
-  return (
-    <header className={styles.header}>
-      {MENU_ITEMS.map(({ title, route, isAuth }) => (
-        <MenuItem title={title} route={route} isAuth={isAuth} />
-      ))}
-      {/* <Link href={ROUTES.LOGIN}>
-        <div className={styles.menuItem}>Login</div>
-      </Link>
-      <Link href={ROUTES.REGISTER}>
-        <div className={styles.menuItem}>Register</div>
-      </Link>
-      {session?.user && <div className={styles.menuItemLogout}>Logout</div>} */}
-    </header>
-  );
+	return (
+		<header className={styles.header}>
+			{MENU_ITEMS.map(({ title, route, isAuth }) => (
+				<MenuItem
+					key={title}
+					title={title}
+					route={route}
+					isAuth={isAuth}
+				/>
+			))}
+		</header>
+	);
 };
 
 export default Header;
