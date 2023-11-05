@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should match snapshot when user is NOT logged in 1`] = `
+exports[`Header should fail on getServerSession 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -107,7 +107,7 @@ exports[`Header should match snapshot when user is NOT logged in 1`] = `
 }
 `;
 
-exports[`Header should match snapshot when user is NOT logged in 2`] = `
+exports[`Header should match snapshot when user is NOT logged in 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

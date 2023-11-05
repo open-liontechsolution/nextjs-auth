@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import Login from '../../../../src/app/login/page';
+import Home from '../../../src/app/page';
 
-describe('Login', () => {
+describe('App Page', () => {
 	it('should match snapshot', () => {
-		const component = render(<Login title="Login" />);
+		const component = render(<Home />);
 		expect(component).toMatchSnapshot();
 	});
 });

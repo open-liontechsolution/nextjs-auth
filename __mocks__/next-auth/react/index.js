@@ -1,5 +1,5 @@
-export const signInMock = jest.fn();
+const signInMock = jest.fn();
+const SessionProviderMock = jest.fn();
 
 export const signIn = signInMock;
-
-export default jest.fn();
+export const SessionProvider = SessionProviderMock;

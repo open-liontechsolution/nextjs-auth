@@ -1,14 +1,15 @@
 import { getServerSession } from 'next-auth';
-// import { redirect } from 'next/navigation';
-
-export const getSession = () => {
-	return;
-};
+import { redirect } from 'next/navigation';
 
 const Dashboard = async () => {
-	const session = await getServerSession();
+	let session;
+	try {
+		session = await getServerSession();
+	} catch (error) {
+		console.error();
+	}
 
-	// if (!session?.user) return redirect('/');
+	if (!session?.user) return redirect('/');
 	return <div>Welcome {session?.user?.name}</div>;
 };
 

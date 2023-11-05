@@ -5,14 +5,14 @@ import { userSessionMock } from '../../../../__mocks__/data/userSession';
 
 describe('Header', () => {
 	it('should match snapshot when user is logged in', async () => {
-		getServerSession.mockReturnValue(userSessionMock);
+		getServerSession.mockReturnValueOnce(userSessionMock);
 
 		const component = render(await Header());
 		expect(component).toMatchSnapshot();
 	});
 
 	it('should match snapshot when user is NOT logged in', async () => {
-		getServerSession.mockReturnValue(null);
+		getServerSession.mockReturnValueOnce(null);
 
 		const component = render(await Header());
 		expect(component).toMatchSnapshot();
