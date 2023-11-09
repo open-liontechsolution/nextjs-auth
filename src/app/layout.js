@@ -3,7 +3,7 @@ import './globals.css';
 import SessionProvider from './SessionProvider';
 import { getServerSession } from 'next-auth';
 import Header from '../components/Header/Header';
-import { authOptions } from '../../pages/api/auth/[...nextauth]';
+import { authOptions } from './api/auth/[...nextauth]';
 
 // Force Dynamic prevent build error
 export const dynamic = 'force-dynamic';
@@ -27,8 +27,8 @@ export default async function RootLayout({ children }) {
 			<body className={inter.className}>
 				<SessionProvider session={session}>
 					<Header />
+					{children}
 				</SessionProvider>
-				{children}
 			</body>
 		</html>
 	);

@@ -1,0 +1,8 @@
+.socialContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 4rem;
+	max-width: 25rem;
+	width: 100%;
+}
