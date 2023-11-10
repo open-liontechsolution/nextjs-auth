@@ -11,6 +11,7 @@ const customJestConfig = {
 
 	testEnvironment: 'jest-environment-jsdom',
 	collectCoverageFrom: ['src/app/**/*.js', 'src/components/**/*.js'],
+	coveragePathIgnorePatterns: ['src/app/api/auth/*'],
 };
 
 // // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
