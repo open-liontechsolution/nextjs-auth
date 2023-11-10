@@ -12,17 +12,21 @@ const LoginEmail = () => {
 	const login = async (e) => {
 		e.preventDefault();
 
-		const email = emailRef.current.value;
-		const password = passwordRef.current.value;
+		try {
+			const email = emailRef.current.value;
+			const password = passwordRef.current.value;
 
-		const res = await signIn('login', {
-			email,
-			password,
-			redirect: false,
-		});
+			const res = await signIn('login', {
+				email,
+				password,
+				redirect: false,
+			});
 
-		if (res.error) {
-			setRegisterError(res.error);
+			if (res.error) {
+				setRegisterError(res.error);
+			}
+		} catch (error) {
+			console.error(error);
 		}
 	};
 	return (
@@ -32,11 +36,21 @@ const LoginEmail = () => {
 			<section>
 				<label>
 					Email:
-					<input ref={emailRef} type="email" />
+					<input
+						name="email"
+						ref={emailRef}
+						type="email"
+						placeholder="email@gmail.com"
+					/>
 				</label>
 				<label>
 					Password:
-					<input ref={passwordRef} type="password" />
+					<input
+						name="password"
+						ref={passwordRef}
+						type="password"
+						placeholder="********"
+					/>
 				</label>
 				{registerError}
 				<button type="submit">Login</button>
