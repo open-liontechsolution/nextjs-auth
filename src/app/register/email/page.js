@@ -1,9 +1,9 @@
 'use client';
 import { useRef, useState } from 'react';
-import AuthForm from '../../components/AuthForm/AuthForm';
 import { signIn } from 'next-auth/react';
+import AuthForm from '../../../components/AuthForm/AuthForm';
 
-const Register = () => {
+const RegisterEmail = () => {
 	const emailRef = useRef();
 	const passwordRef = useRef();
 	const [registerError, setRegisterError] = useState();
@@ -11,17 +11,21 @@ const Register = () => {
 	const register = async (e) => {
 		e.preventDefault();
 
-		const email = emailRef.current.value;
-		const password = passwordRef.current.value;
+		try {
+			const email = emailRef.current.value;
+			const password = passwordRef.current.value;
 
-		const res = await signIn('signup', {
-			email,
-			password,
-			redirect: false,
-		});
+			const res = await signIn('signup', {
+				email,
+				password,
+				redirect: false,
+			});
 
-		if (res.error) {
-			setRegisterError(res.error);
+			if (res?.error) {
+				setRegisterError(res.error);
+			}
+		} catch (error) {
+			console.error(error);
 		}
 	};
 	return (
@@ -31,11 +35,21 @@ const Register = () => {
 			<section>
 				<label>
 					Email:
-					<input ref={emailRef} type="email" />
+					<input
+						name="email"
+						ref={emailRef}
+						placeholder="email@gmail.com"
+						type="email"
+					/>
 				</label>
 				<label>
 					Password:
-					<input ref={passwordRef} type="password" />
+					<input
+						name="password"
+						ref={passwordRef}
+						placeholder="********"
+						type="password"
+					/>
 				</label>
 				{registerError}
 				<button type="submit">Signup</button>
@@ -44,4 +58,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default RegisterEmail;

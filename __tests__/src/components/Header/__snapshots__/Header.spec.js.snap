@@ -240,11 +240,6 @@ exports[`Header should match snapshot when user is logged in 1`] = `
             Register
           </div>
         </a>
-        <div
-          class="menuItemLogout"
-        >
-          Logout
-        </div>
       </header>
     </div>
   </body>,
@@ -270,11 +265,6 @@ exports[`Header should match snapshot when user is logged in 1`] = `
           Register
         </div>
       </a>
-      <div
-        class="menuItemLogout"
-      >
-        Logout
-      </div>
     </header>
   </div>,
   "debug": [Function],

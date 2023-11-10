@@ -7,65 +7,13 @@ exports[`AuthForm should match snapshot for login 1`] = `
     <div>
       <form
         class="form"
-      >
-        <h1>
-          Login
-        </h1>
-        <section
-          class="socialContainer"
-        >
-          <div
-            class="socialButton"
-          >
-            <img
-              alt="Google"
-              data-nimg="1"
-              decoding="async"
-              height="40"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-              style="color: transparent;"
-              width="40"
-            />
-            <p>
-              Login with Google
-            </p>
-          </div>
-        </section>
-      </form>
+      />
     </div>
   </body>,
   "container": <div>
     <form
       class="form"
-    >
-      <h1>
-        Login
-      </h1>
-      <section
-        class="socialContainer"
-      >
-        <div
-          class="socialButton"
-        >
-          <img
-            alt="Google"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
-          <p>
-            Login with Google
-          </p>
-        </div>
-      </section>
-    </form>
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

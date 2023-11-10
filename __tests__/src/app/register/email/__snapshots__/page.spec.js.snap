@@ -1,27 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Layout should fail on getServerSession 1`] = `
+exports[`RegisterEmail should NOT login successfully 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <html
-        lang="en"
+      <form
+        class="form"
       >
-        <body
-          class="classNamesMock"
-        />
-      </html>
+        <h1>
+          Signup with email
+        </h1>
+        <section>
+          <label>
+            Email:
+            <input
+              name="email"
+              placeholder="email@gmail.com"
+              type="email"
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              name="password"
+              placeholder="********"
+              type="password"
+            />
+          </label>
+          error
+          <button
+            type="submit"
+          >
+            Signup
+          </button>
+        </section>
+      </form>
     </div>
   </body>,
   "container": <div>
-    <html
-      lang="en"
+    <form
+      class="form"
     >
-      <body
-        class="classNamesMock"
-      />
-    </html>
+      <h1>
+        Signup with email
+      </h1>
+      <section>
+        <label>
+          Email:
+          <input
+            name="email"
+            placeholder="email@gmail.com"
+            type="email"
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            name="password"
+            placeholder="********"
+            type="password"
+          />
+        </label>
+        error
+        <button
+          type="submit"
+        >
+          Signup
+        </button>
+      </section>
+    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -77,28 +125,74 @@ exports[`App Layout should fail on getServerSession 1`] = `
 }
 `;
 
-exports[`App Layout should render layout for NOT logged user 1`] = `
+exports[`RegisterEmail should fail on signIn 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <html
-        lang="en"
+      <form
+        class="form"
       >
-        <body
-          class="classNamesMock"
-        />
-      </html>
+        <h1>
+          Signup with email
+        </h1>
+        <section>
+          <label>
+            Email:
+            <input
+              name="email"
+              placeholder="email@gmail.com"
+              type="email"
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              name="password"
+              placeholder="********"
+              type="password"
+            />
+          </label>
+          <button
+            type="submit"
+          >
+            Signup
+          </button>
+        </section>
+      </form>
     </div>
   </body>,
   "container": <div>
-    <html
-      lang="en"
+    <form
+      class="form"
     >
-      <body
-        class="classNamesMock"
-      />
-    </html>
+      <h1>
+        Signup with email
+      </h1>
+      <section>
+        <label>
+          Email:
+          <input
+            name="email"
+            placeholder="email@gmail.com"
+            type="email"
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            name="password"
+            placeholder="********"
+            type="password"
+          />
+        </label>
+        <button
+          type="submit"
+        >
+          Signup
+        </button>
+      </section>
+    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -154,28 +248,74 @@ exports[`App Layout should render layout for NOT logged user 1`] = `
 }
 `;
 
-exports[`App Layout should render layout for logged user 1`] = `
+exports[`RegisterEmail should login successfully 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <html
-        lang="en"
+      <form
+        class="form"
       >
-        <body
-          class="classNamesMock"
-        />
-      </html>
+        <h1>
+          Signup with email
+        </h1>
+        <section>
+          <label>
+            Email:
+            <input
+              name="email"
+              placeholder="email@gmail.com"
+              type="email"
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              name="password"
+              placeholder="********"
+              type="password"
+            />
+          </label>
+          <button
+            type="submit"
+          >
+            Signup
+          </button>
+        </section>
+      </form>
     </div>
   </body>,
   "container": <div>
-    <html
-      lang="en"
+    <form
+      class="form"
     >
-      <body
-        class="classNamesMock"
-      />
-    </html>
+      <h1>
+        Signup with email
+      </h1>
+      <section>
+        <label>
+          Email:
+          <input
+            name="email"
+            placeholder="email@gmail.com"
+            type="email"
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            name="password"
+            placeholder="********"
+            type="password"
+          />
+        </label>
+        <button
+          type="submit"
+        >
+          Signup
+        </button>
+      </section>
+    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -231,28 +371,74 @@ exports[`App Layout should render layout for logged user 1`] = `
 }
 `;
 
-exports[`App Layout should render layout without children 1`] = `
+exports[`RegisterEmail should match snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <html
-        lang="en"
+      <form
+        class="form"
       >
-        <body
-          class="classNamesMock"
-        />
-      </html>
+        <h1>
+          Signup with email
+        </h1>
+        <section>
+          <label>
+            Email:
+            <input
+              name="email"
+              placeholder="email@gmail.com"
+              type="email"
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              name="password"
+              placeholder="********"
+              type="password"
+            />
+          </label>
+          <button
+            type="submit"
+          >
+            Signup
+          </button>
+        </section>
+      </form>
     </div>
   </body>,
   "container": <div>
-    <html
-      lang="en"
+    <form
+      class="form"
     >
-      <body
-        class="classNamesMock"
-      />
-    </html>
+      <h1>
+        Signup with email
+      </h1>
+      <section>
+        <label>
+          Email:
+          <input
+            name="email"
+            placeholder="email@gmail.com"
+            type="email"
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            name="password"
+            placeholder="********"
+            type="password"
+          />
+        </label>
+        <button
+          type="submit"
+        >
+          Signup
+        </button>
+      </section>
+    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

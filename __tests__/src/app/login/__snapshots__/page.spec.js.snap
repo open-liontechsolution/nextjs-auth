@@ -32,6 +32,28 @@ exports[`Login should match snapshot 1`] = `
               Login with Google
             </p>
           </div>
+          <a
+            href="/login/email"
+          >
+            <div
+              class="socialButton"
+            >
+              <img
+                alt="Email"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+              <p>
+                Login with Email
+              </p>
+            </div>
+          </a>
         </section>
       </form>
     </div>
@@ -64,6 +86,28 @@ exports[`Login should match snapshot 1`] = `
             Login with Google
           </p>
         </div>
+        <a
+          href="/login/email"
+        >
+          <div
+            class="socialButton"
+          >
+            <img
+              alt="Email"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+            <p>
+              Login with Email
+            </p>
+          </div>
+        </a>
       </section>
     </form>
   </div>,
